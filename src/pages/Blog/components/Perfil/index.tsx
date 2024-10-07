@@ -3,13 +3,13 @@ import { InfoContainer, ListInfoContainer, PerfilContainer } from './styles'
 import { FaArrowUpRightFromSquare, FaUserGroup } from 'react-icons/fa6'
 import { useEffect, useState } from 'react'
 import { User } from '../../../../@types/user'
-import axios from 'axios'
+import { api } from '../../../../lib/axios'
 
 export function Perfil() {
   const [user, setUser] = useState<User>()
 
   async function fetchUser() {
-    const response = await axios.get('https://api.github.com/users/Joaonaif')
+    const response = await api.get('')
 
     setUser(response.data)
   }

@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const PostContainer = styled.div`
-  min-height: 16.25rem;
-  min-width: 26rem;
+  min-height: 14.25rem;
+  min-width: 24rem;
 
   padding: 1.5rem;
   border-radius: 10px;
