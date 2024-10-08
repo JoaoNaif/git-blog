@@ -1,17 +1,21 @@
+import { Repos } from '../../../../@types/repos'
 import { PostContainer } from './styles'
 
-export function PostItem() {
+interface PostItemProps {
+  repository: Repos
+}
+
+export function PostItem({ repository }: PostItemProps) {
   return (
-    <PostContainer>
+    <PostContainer to={`/post/${repository.id}`}>
       <div>
-        <h1>JavaScipt data types and data structures</h1>
+        <h1>{repository.name}</h1>
         <span>Há 1 dia</span>
       </div>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, harum
-        sed ducimus, nobis excepturi laudantium sint consequatur necessitatibus
-        eos qui nostrum enim totam dolor et architecto. Minus ratione voluptate
-        vel.
+        {repository.description === null
+          ? 'Sem descrição'
+          : repository.description}
       </p>
     </PostContainer>
   )

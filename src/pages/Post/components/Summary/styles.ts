@@ -16,7 +16,9 @@ export const SummaryContainer = styled.section`
     display: flex;
     justify-content: space-between;
 
-    span {
+    a {
+      text-decoration: none;
+
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -25,10 +27,20 @@ export const SummaryContainer = styled.section`
       font-weight: bold;
 
       cursor: pointer;
+      opacity: 0.8;
 
       color: ${(props) => props.theme['blue-500']};
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
+`
+
+export const MainContainer = styled.main`
+  display: flex;
+  flex-direction: column;
 `
 
 export const ListInfoContainer = styled.ul`

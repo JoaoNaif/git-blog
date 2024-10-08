@@ -29,6 +29,7 @@ export const SearchContainer = styled.div`
     border-radius: 6px;
     border: 1px solid ${(props) => props.theme['cyan-600']};
     background: ${(props) => props.theme['cyan-950']};
+    color: ${(props) => props.theme['cyan-300']};
 
     &::placeholder {
       color: ${(props) => props.theme['cyan-500']};
@@ -40,4 +41,6 @@ export const ListPost = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+
+  list-style: decimal;
 `

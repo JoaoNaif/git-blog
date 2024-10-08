@@ -1,12 +1,17 @@
 import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
 
-export const PostContainer = styled.div`
+export const PostContainer = styled(NavLink)`
+  text-decoration: none;
+
   min-height: 14.25rem;
   min-width: 24rem;
 
   padding: 1.5rem;
   border-radius: 10px;
   border: 2px solid transparent;
+
+  color: ${(props) => props.theme['cyan-300']};
   background: ${(props) => props.theme['cyan-700']};
 
   cursor: pointer;
